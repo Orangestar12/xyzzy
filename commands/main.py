@@ -26,7 +26,7 @@ class Main:
                 "Detailed help can be found at the link below.\n"
                 'For quick information on a command, type "@{0.name}#{0.discriminator} help (command)"\n'
                 "```\n"
-                "http://xyzzy.roadcrosser.xyz/help/".format(self.xyzzy.user)
+                "https://www.orangestar.dev/xyzzy/".format(self.xyzzy.user)
             )
 
         cmd = self.xyzzy.commands.get_command(ctx.args[0].lower())
@@ -41,7 +41,7 @@ class Main:
 
             if cmd.has_site_help:
                 msg += (
-                    "\nMore information: http://xyzzy.roadcrosser.xyz/help/#{}".format(
+                    "\nMore information: https://www.orangestar.dev/xyzzy/#{}".format(
                         cmd.name
                     )
                 )
@@ -71,14 +71,14 @@ class Main:
     async def about(self, ctx):
         """Sends information about xyzzy."""
         await ctx.send(
-            "Information about xyzzy can be found here: http://roadcrosser.xyz/zy"
+            "Information about xyzzy can be found here: https://www.orangestar.dev/xyzzy/"
         )
 
     @command(aliases=["join"], has_site_help=False)
     async def invite(self, ctx):
         """Gives the bot"s invite link."""
         await ctx.send(
-            "This bot can be invited through the following URL: <http://xyzzy.roadcrosser.xyz/invite>"
+            "This bot can be invited through the following URL: <https://www.orangestar.dev/xyzzy/invite>"
         )
 
     @command(has_site_help=False)
@@ -88,7 +88,7 @@ class Main:
 # Here are all of the games I have available: #
 {}
 ```
-Alternatively, an up-to-date list can be found here: http://xyzzy.roadcrosser.xyz/list""".format(
+Alternatively, an up-to-date list can be found here: https://www.orangestar.dev/xyzzy/list""".format(
             "\n".join(sorted(self.xyzzy.games))
         )
 
@@ -99,7 +99,7 @@ Alternatively, an up-to-date list can be found here: http://xyzzy.roadcrosser.xy
                 await ctx.send(msg, dest="author")
             except:
                 await ctx.send(
-                    "I cannot PM you, as you seem to have private messages disabled. However, an up-to-date list is available at: http://xyzzy.roadcrosser.xyz/list"
+                    "I cannot PM you, as you seem to have private messages disabled. However, an up-to-date list is available at: https://www.orangestar.dev/xyzzy/list"
                 )
 
     @command(has_site_help=False, hidden=True)
