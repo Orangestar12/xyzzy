@@ -111,7 +111,7 @@ Alternatively, an up-to-date list can be found here: https://www.orangestar.dev/
     @command(has_site_help=False, hidden=True)
     async def unprefixed(self, ctx):
         await ctx.send(
-            "Unfortunately the unprefixed option is no longner possible due to restrictions from Discord on getting message content."
+            "Unfortunately the unprefixed option is no longer possible due to restrictions from Discord on getting message content."
         )
 
     @command(usage="[ game ]")
@@ -122,6 +122,7 @@ Alternatively, an up-to-date list can be found here: https://www.orangestar.dev/
         If only one game is found with that text in it's name, it will start that game.
         If you run the command with a save file attached, xyzzy will try to load a game from it.
         """
+        await ctx.send('***NOTE:*** This version of the bot will be disabled soon. Please join the Discord or invite the new version of this bot at https://orangestar.dev/xyzzy/invite so you can be aware of this change.')
         # Don't do DMs kids.
         if ctx.is_dm():
             return await ctx.send(
