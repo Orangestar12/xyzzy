@@ -1,0 +1,61 @@
+@font-face {
+    font-family: Whitney Book;
+    src: url(https://discordapp.com/assets/e8acd7d9bf6207f99350ca9f9e23b168.woff) format('woff');
+}
+body {
+    background: #36393E;
+    color: #FFF;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-family: Whitney Book,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;
+}
+
+header {
+    font-size: 4em;
+    text-align: center;
+}
+
+code {
+    display: inline-block;
+    background: #2E3136;
+    border-radius: 3px;
+    color: #DDD;
+    font-family: Consolas,Liberation Mono,Menlo,Courier,monospace;
+    padding: 2px 4px;
+}
+code.block {
+    display: block;
+    padding: 0.65em;
+    border: 1px solid #282B30;
+}
+
+.xyzzy-command {
+  font-family: Consolas,Liberation Mono,Menlo,Courier,monospace;
+}
+.options {
+    font-style: italic;
+    font-weight: normal;
+}
+
+a, a:visited { color: #88F; }
+a:hover { color: #DDF; }
+
+p.todo {
+    font-style: italic;
+    font-weight: bold;
+}
+p.todo::before {
+    content: 'TODO: ';
+    color: #D44;
+}
+
+.mention {
+    color: #FFF;
+    font-weight: 500;
+    background: rgba(136, 136, 255, 0.3);
+    padding: 0 2px;
+    border-radius: 3px;
+}
+.mention:hover {
+    background: #88F;
+}

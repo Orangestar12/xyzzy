@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>xyzzy help</title>
+    <meta charset="utf-8" />
+    <meta content=">help" property="og:title"/>
+    <meta content='How to use xyzzy.' property="og:description"/>
+    <meta content="https://orangestar.dev/xyzzy/icon_alt.png" property="og:image"/>
+    <link rel="icon" type="image/png" href="./icon_alt.png">
+    <link rel="stylesheet" href="./main.css"/>
+</head>
+<body>
+    <header>xyzzy help</header>
+    <h1>What even is this bot?</h1>
+        <h2>A brief history</h2>
+            <p>
+                A long time ago, <a href="https://en.wikipedia.org/wiki/William_Crowther_(programmer)">some guy</a> made <a href="https://en.wikipedia.org/wiki/Colossal_Cave_Adventure">an interactive text adventure about exploring a cave</a> for his kids. Gameplay consisted of entering commands into the game to tell the main character what to do, marking the first entry in the Interactive Fiction genre.
+            </p>
+            <p>
+                Some students and staff at MIT, later inspired by the game, created another one called <a href="https://en.wikipedia.org/wiki/Zork">Zork</a>, later founding <a href="https://en.wikipedia.org/wiki/Infocom">Infocom</a>, the company that truly jumpstarted Interactive Fiction.
+            </p>
+            <p>
+                The variety of platforms available at the time were numerous and incompatible. Having to port each and every game the company released to every platform would be a daunting task, and so the <a href="https://en.wikipedia.org/wiki/Z-machine">Z-Machine</a> was created. A virtual machine that only served to be emulated, it was easier to port the Z-Machine to every platform and have the games run on that, instead of porting each game individually.
+            </p>
+            <p>
+                As the genre grew in popularity, more and more games had been created for the Z-Machine, and fanatics had ported it onto more modern (at the time) platforms, including <a href="https://en.wikipedia.org/wiki/IOS">iOS</a>, <a href="https://en.wikipedia.org/wiki/Android_(operating_system)">Android</a>, <a href="https://en.wikipedia.org/wiki/Palm_OS">Palm OS</a> and the <a href="https://en.wikipedia.org/wiki/Game_Boy">Game Boy</a>.
+            </p>
+        <h2>Where we are now</h2>
+            <p>
+                The Z-Machine is now available through this bot, allowing you to play Interactive Fiction games on Discord.
+            </p>
+            <p>
+                As there are a wild selection of games in the genre, some may differ from others. <a href="http://pr-if.org/doc/play-if-card/play-if-card.html">This guide</a> will apply to most games and help you get started, but there may be a few with different systems of input.
+            </p>
+            <p>
+                The older games may be quite hard because people back then weren't fun or good at game design. Additionally, due to piracy concerns, the solutions to some puzzles may have only been found in <a href="http://www.ifwiki.org/index.php/Feelies">feelies</a>, physical items like photographs, maps or brochures that shipped with the game, back when you could still buy them in a box. For this reason, it is recommended that you look up more information about a game if you are stuck.
+            </p>
+
+    <h1>User Commands</h1>
+        <p>
+            All commands need to be prefixed with a mention of the bot (<span class="mention">@xyzzy</span>) in order to work.
+        </p>
+        <h2>Gameplay Commands</h2>
+            <p>
+                These commands are available to most or all users of xyzzy, and assist in playing or controlling games.
+            </p>
+            <h3 class="xyzzy-command" id="input">
+                ><span class="options">input</span>
+            </h3>
+            <p>
+                Any command submitted with a single greater than sign after the mention will be submitted to the game running inside of xyzzy. I.E., if xyzzy was playing Zork and you wanted to pick up a lantern, you would do <code>@xyzzy >get lantern</code>.
+            </p>
+            <p>
+                You can also omit the mention if you reply-ping to a message sent from xyzzy, e.g. just <code>>get lantern</code>
+            </p>
+            <h3 class="xyzzy-command" id="play">
+                play <span class="options">[ Game name ]</span>
+            </h3>
+            <p>
+                Tells xyzzy to start playing the game specified in <i>[Game name]</i> in the current channel. If no game is found with that name, xyzzy will show you any close matches it can find, and if there is only one, start that one.
+            </p>
+            <p>
+                Alternatively, you can also attach a save file from a game with this command, and it will attempt to match a game in its database to your save and load it.
+            </p>
+            <h3 class="xyzzy-command" id="upload">
+                upload
+            </h3>
+            <p>
+                Attaching a save file with this command will upload the save file to your channel instance, allowing you to use a <code>RESTORE</code> game command to load them.
+            </p>
+            <h3 class="xyzzy-command" id="indent">
+                indent <span class="options">[ indent level ]</span>
+            </h3>
+            <p>
+                Will make xyzzy scrap the first <i>[indent level]</i> characters for each line in his output. If you're noticing random spaces after each line break, use this command.
+            </p>
+            <p>
+                <i>[Indent level]</i> must be an integer between 0 and the total console width. (Usually 80.)
+            </p>
+            <h3 class="xyzzy-command" id="forcequit">
+                forcequit <span class="options">or `mortim`</span>
+            </h3>
+            <p>
+                After confirmation, terminates the process running the xyzzy game you are playing. <b>It is recommended to try to exit the game using an in-game method before using this command.</b> <code>>quit</code> usually works.
+            </p>
+            <p>
+                This command has an alias in <code>mortim</code>
+            </p>
+            <h3 class="xyzzy-command" id="modes">
+                modes
+            </h3>
+            <p>
+                Lists and describes all possiblle game input modes.
+            </p>
+            <h3 class="xyzzy-command" id="mode">
+                mode <span class="options">[ anarchy | democracy | driver ]</span>
+            </h3>
+            <p>
+                Sets a game input mode if a game is running on the current channel.
+            </p>
+            <h3 class="xyzzy-command" id="transfer">
+                transfer <span class="options">@mention#1234</span>
+            </h3>
+            <p>
+                Transfers input rights to the mentioned user. Only usable in Driver mode.
+            </p>
+        <h2>Bot Status and Health</h2>
+            <h3 class="xyzzy-command" id="list">
+                list
+            </h3>
+            <p>
+                Sends you a direct message containing all stories in xyzzy's library.
+            </p>
+        <h2>Moderation Commands</h3>
+            <p>
+                These commands are only available to users that have the permission to kick other users from the Discord server they are invoked on.
+            </p>
+            <h3 class="xyzzy-command" id="block">
+                block <span class="options">[ @User Mention#1234 ] or `plugh`</span>
+            </h3>
+            <p>
+                For each user mentioned, disables their ability to send commands to the bot in the server this command was invoked.
+            </p>
+            <p>
+                Blocked users will be sent a Direct Message stating that they are blocked when they try to send a command.
+            </p>
+            <p>
+                This command has an alias in <code>plugh</code>
+            </p>
+            <h3 class="xyzzy-command" id="unblock">
+                unblock <span class="options">[ @User Mention#1234 ]</span>
+            </h3>
+            <p>
+                For each user mentioned, reenables their ability to send commands to the bot in the server this command was invoked.
+            </p>
+            <p>
+                If the user was never blocked, this command fails silently.
+            </p>
+        <h2>Debug Commands</h2>
+            <p>
+                These commands are only available to a specific set of users, and can be catastrophic. They are listed here for completeness.
+            </p>
+            <h3 class="xyzzy-command" id="debug">
+                debug <span class="options">[ python ]</span>
+            </h3>
+            <p>
+                Executes arbitrary Python code.
+            </p>
+            <h3 class="xyzzy-command" id="nowplaying">
+                nowplaying
+            </h3>
+            <p>
+                Sends you a direct message containing all currently running xyzzy instances across Discord.
+            </p>
+            <h3 class="xyzzy-command" id="announce">
+                announce <span class="options">[ Announcement ]</span>
+            </h3>
+            <p>
+                For each channel currently playing a game, sends the text in <i>[Announcement]</i>.
+            </p>
+            <h3 class="xyzzy-command" id="output">
+                output
+            </h3>
+            <p>
+                Toggles whether the text being sent to this channel from a currently playing story also should be printed to the terminal. This is functionally useless in most cases.
+            </p>
+            <h3 class="xyzzy-command" id="shutdown">
+                shutdown
+            </h3>
+            <p>
+                After confirmation, shuts down the bot and all running games.
+            </p>
+</body>
+</html>
+
