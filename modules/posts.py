@@ -15,18 +15,18 @@ async def post_carbon(xyzzy):
         print("[{}] {}".format(r.status, text))
 
 
-async def post_dbots(xyzzy):
-    if xyzzy.dbots_key:
-        url = "https://bots.discord.pw/api/bots/{}/stats".format(xyzzy.user.id)
-        data = json.dumps({"server_count": len(xyzzy.guilds)})
-        headers = {"Authorization": xyzzy.dbots_key, "content-type": "application/json"}
+# async def post_dbots(xyzzy):
+#     if xyzzy.dbots_key:
+#         url = "https://discord.bots.gg/api/bots/{}/stats".format(xyzzy.user.id)
+#         data = json.dumps({"server_count": len(xyzzy.guilds)})
+#         headers = {"Authorization": xyzzy.dbots_key, "content-type": "application/json"}
 
-        print("\nPosting to DBots...")
+#         print("\nPosting to discord.bots.gg...")
 
-        async with xyzzy.session.post(url, data=data, headers=headers) as r:
-            text = await r.text()
+#         async with xyzzy.session.post(url, data=data, headers=headers) as r:
+#             text = await r.text()
 
-        print("[{}] {}".format(r.status, text))
+#         print("[{}] {}".format(r.status, text))
 
 
 async def post_gist(xyzzy):
@@ -58,7 +58,7 @@ async def post_gist(xyzzy):
 
 async def post_all(xyzzy):
     await post_carbon(xyzzy)
-    await post_dbots(xyzzy)
+    # await post_dbots(xyzzy) # urls are wrong because this site changed domains
     await post_gist(xyzzy)
 
 
